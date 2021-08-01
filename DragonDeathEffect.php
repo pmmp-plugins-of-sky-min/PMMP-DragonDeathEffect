@@ -7,6 +7,7 @@
  * @version SKY
  * @api 3.0.0
  */
+ 
 declare(strict_types = 1);
 
 namespace skymin\dragon\api;
@@ -20,9 +21,6 @@ use pocketmine\network\mcpe\protocol\{ActorEventPacket, AddActorPacket, RemoveAc
 
 use pocketmine\level\Level;
 use pocketmine\level\Position;
-
-use pocketmine\entity\Effect;
-use pocketmine\entity\EffectInstance;
 
 use pocketmine\scheduler\Task;
 
@@ -46,9 +44,9 @@ class DragonDeathEffect extends PluginBase{
     $id = Entity::$entityCount++;
     
     $pk = new AddActorPacket();
-    $pk->type = "minecraft:ender_dragon";
+    $pk->type = 'minecraft:ender_dragon';
     $pk->entityRuntimeId = $id;
-    $pk->metadata = [];
+    $pk->metadata = [Entity::DATA_SCALE => [Entity::DATA_TYPE_FLOAT, 0]];
     $pk->motion = null;
     $pk->position = new Position($x, $y, $z, $level);
     Server::getInstance()->batchPackets($player, [$pk], false);
