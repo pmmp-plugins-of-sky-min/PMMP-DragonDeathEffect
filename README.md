@@ -14,3 +14,5 @@ player can see the effect
 ```php
 DragonDeathEffect::getInstance()->setEffect(array $player, int|float $x, int|float $y, int|float $z, Level $level, int $tick);
 ```
+
+Please keep $tick below 120
