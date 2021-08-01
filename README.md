@@ -7,3 +7,7 @@
 ```php
 skymin\dragon\api\DragonDeathEffect;
 ```
+
+```php
+DragonDeathEffect::getInstance()->setEffect(array $player, int|float $x, int|float $y, int|float $z, Level $level);
+```
