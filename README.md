@@ -4,4 +4,6 @@
 
 ## How to use
 
+```php
 skymin\dragon\api\DragonDeathEffect;
+```
