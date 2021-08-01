@@ -5,8 +5,11 @@
 ## How to use
 
 ```php
-skymin\dragon\api\DragonDeathEffect;
+use skymin\dragon\api\DragonDeathEffect;
 ```
+
+
+player can see the effect
 
 ```php
 DragonDeathEffect::getInstance()->setEffect(array $player, int|float $x, int|float $y, int|float $z, Level $level);
