@@ -40,7 +40,7 @@ class DragonDeathEffect extends PluginBase{
     $this->getLogger()->alert('made by skymin');
   }
   
-  public function setEffect(array $player, $x, $y, $z, Level $level):void{
+  public function setEffect(array $player, $x, $y, $z, Level $level, $ticks = 120) : void{
     $id = Entity::$entityCount++;
     
     $pk = new AddActorPacket();
@@ -69,7 +69,7 @@ class DragonDeathEffect extends PluginBase{
       public function onRun($currentTick){
         Server::getInstance()->batchPackets($this->player, [$this->pk], false);
       }
-    }, 120);
+    }, $ticks);
   }
   
 }
