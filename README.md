@@ -8,7 +8,7 @@
 use skymin\dragon\api\DragonDeathEffect;
 ```
 
-
+</br>
 player can see the effect
 
 ```php
